@@ -1,21 +1,21 @@
 #include "sort.h"
+
 /**
- * bubble_sort - Sort an array with buble sort algorithm
- * @array: Array that going to be sorted
- * @size: Size of array
- * Return: Nothing, just sort and print when swap
+ * bubble_sort - sorts an array in ascending order
+ * @array: array of ints to sort
+ * @size: size of the array
  */
 void bubble_sort(int *array, size_t size)
 {
+	unsigned int i, j;
 	int tmp;
-	size_t i, j;
 
-	if (array == NULL || size == 0)
+	if (size < 2)
 		return;
 
 	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < size - 1; j++)
+		for (j = 0; j < size - i - 1; j++)
 		{
 			if (array[j] > array[j + 1])
 			{
